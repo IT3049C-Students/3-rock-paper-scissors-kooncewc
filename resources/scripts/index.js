@@ -14,7 +14,7 @@ let game = new RockPaperScissors(username);
 
 
 // hide game screen
-gameScreen.classList.add(`d-none`);
+gameScreen.classList.add
 
 
 
@@ -33,7 +33,7 @@ function updateGameHistoryUI(){
 startGameButton.addEventListener(`click`, function () {
   const username = game.userName
   game = new RockPaperScissors(userName);
-  gameScreen.setAttribute("d-block");
+  gameScreen.classList.remove("d-block");
   // Complete
 });
 
@@ -43,6 +43,7 @@ goButton.addEventListener(`click`, function () {
   play(userSelection) = game.userSelection
   updateScoreTallyUI();
   updateGameHistoryUI();
+  Event.preventDefault();
 });
 
 // If you're doing the extra-credit, uncomment the below: reset-game-button

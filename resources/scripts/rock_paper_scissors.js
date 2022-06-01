@@ -1,3 +1,5 @@
+const { random } = require("lodash");
+
 class RockPaperScissors {
   constructor(username) {
     this.username = username;
@@ -14,10 +16,10 @@ class RockPaperScissors {
    */
   generateCPUResponse(){
     const acceptedValues = [ `rock`, `paper`, `scissors` ];
-   var randomNumber = Math.floor(Math.random(acceptedValues())*3) + 1;
+   var randomNumber = Math.floor(Math.random()*3) + 1;
 
 
-    return randomNumber;
+    return acceptedValues[randomNumber];
   }
   /**
    * returns one of the following values: `win`, `lose`, `tie`
